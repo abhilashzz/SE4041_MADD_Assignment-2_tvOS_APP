@@ -11,10 +11,11 @@ xcuserdata/
 !default.pbxuser
 !default.perspectivev3
 
-# tvOS build artifacts
+# tvOS build artifacts & archives
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.zip
 
 # Windows / IDE
 Thumbs.db
