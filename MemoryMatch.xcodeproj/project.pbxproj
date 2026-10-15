@@ -1,0 +1,829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		MM0100012C10000100000001 /* MemoryMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200012C10000100000001 /* MemoryMatchApp.swift */; };
+		MM0100022C10000100000001 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200022C10000100000001 /* AppState.swift */; };
+		MM0100032C10000100000001 /* MemoryMatchTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200032C10000100000001 /* MemoryMatchTheme.swift */; };
+		MM0100042C10000100000001 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200042C10000100000001 /* GameMode.swift */; };
+		MM0100052C10000100000001 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200052C10000100000001 /* Difficulty.swift */; };
+		MM0100062C10000100000001 /* CardItemCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200062C10000100000001 /* CardItemCatalog.swift */; };
+		MM0100072C10000100000001 /* MemoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200072C10000100000001 /* MemoryCard.swift */; };
+		MM0100082C10000100000001 /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200082C10000100000001 /* PlayerProfile.swift */; };
+		MM0100092C10000100000001 /* GameRoundResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200092C10000100000001 /* GameRoundResult.swift */; };
+		MM01000A2C10000100000001 /* DelayScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02000A2C10000100000001 /* DelayScheduler.swift */; };
+		MM01000B2C10000100000001 /* MemoryGameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02000B2C10000100000001 /* MemoryGameEngine.swift */; };
+		MM01000C2C10000100000001 /* MemoryMatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = MM02000C2C10000100000001 /* MemoryMatch.xcdatamodeld */; };
+		MM01000D2C10000100000001 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02000D2C10000100000001 /* PersistenceController.swift */; };
+		MM01000E2C10000100000001 /* PlayerProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02000E2C10000100000001 /* PlayerProfileRepository.swift */; };
+		MM01000F2C10000100000001 /* GameRoundRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02000F2C10000100000001 /* GameRoundRepository.swift */; };
+		MM0100102C10000100000001 /* TVButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200102C10000100000001 /* TVButtonStyles.swift */; };
+		MM0100112C10000100000001 /* MemoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200112C10000100000001 /* MemoryCardView.swift */; };
+		MM0100122C10000100000001 /* PlayerScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200122C10000100000001 /* PlayerScoreCardView.swift */; };
+		MM0100132C10000100000001 /* TVSegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200132C10000100000001 /* TVSegmentedPicker.swift */; };
+		MM0100142C10000100000001 /* TVCardIllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200142C10000100000001 /* TVCardIllustrationView.swift */; };
+		MM0100152C10000100000001 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200152C10000100000001 /* ConfettiView.swift */; };
+		MM0100162C10000100000001 /* TVModalOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200162C10000100000001 /* TVModalOverlay.swift */; };
+		MM0100172C10000100000001 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200172C10000100000001 /* HomeViewModel.swift */; };
+		MM0100182C10000100000001 /* PlayerSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200182C10000100000001 /* PlayerSetupViewModel.swift */; };
+		MM0100192C10000100000001 /* GameBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200192C10000100000001 /* GameBoardViewModel.swift */; };
+		MM01001A2C10000100000001 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001A2C10000100000001 /* ResultsViewModel.swift */; };
+		MM01001B2C10000100000001 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001B2C10000100000001 /* LeaderboardViewModel.swift */; };
+		MM01001C2C10000100000001 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001C2C10000100000001 /* HomeScreen.swift */; };
+		MM01001D2C10000100000001 /* HowToPlayOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001D2C10000100000001 /* HowToPlayOverlay.swift */; };
+		MM01001E2C10000100000001 /* PlayerSetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001E2C10000100000001 /* PlayerSetupScreen.swift */; };
+		MM01001F2C10000100000001 /* ChoosePlayerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02001F2C10000100000001 /* ChoosePlayerModal.swift */; };
+		MM0100202C10000100000001 /* AddPlayerModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200202C10000100000001 /* AddPlayerModal.swift */; };
+		MM0100212C10000100000001 /* ManagePlayersModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200212C10000100000001 /* ManagePlayersModal.swift */; };
+		MM0100222C10000100000001 /* GameBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200222C10000100000001 /* GameBoardScreen.swift */; };
+		MM0100232C10000100000001 /* PauseOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200232C10000100000001 /* PauseOverlay.swift */; };
+		MM0100242C10000100000001 /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200242C10000100000001 /* ResultsScreen.swift */; };
+		MM0100252C10000100000001 /* LocalLeaderboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200252C10000100000001 /* LocalLeaderboardScreen.swift */; };
+		MM0100262C10000100000001 /* RoundDetailModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200262C10000100000001 /* RoundDetailModal.swift */; };
+		MM0100272C10000100000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = MM0200272C10000100000001 /* Assets.xcassets */; };
+
+/* Unit Tests Build Files */
+		MM0100282C10000100000001 /* MemoryGameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200282C10000100000001 /* MemoryGameEngineTests.swift */; };
+		MM0100292C10000100000001 /* GameEngineLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM0200292C10000100000001 /* GameEngineLifecycleTests.swift */; };
+		MM01002A2C10000100000001 /* PlayerValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02002A2C10000100000001 /* PlayerValidationTests.swift */; };
+		MM01002B2C10000100000001 /* CoreDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02002B2C10000100000001 /* CoreDataPersistenceTests.swift */; };
+		MM01002C2C10000100000001 /* LeaderboardAggregationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02002C2C10000100000001 /* LeaderboardAggregationTests.swift */; };
+
+/* UI Tests Build Files */
+		MM01002D2C10000100000001 /* MemoryMatchNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02002D2C10000100000001 /* MemoryMatchNavigationUITests.swift */; };
+		MM01002E2C10000100000001 /* GameBoardInteractionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = MM02002E2C10000100000001 /* GameBoardInteractionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		MM0300012C10000100000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = MM0000012C10000100000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = MM0000022C10000100000001;
+			remoteInfo = MemoryMatch;
+		};
+		MM0300022C10000100000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = MM0000012C10000100000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = MM0000022C10000100000001;
+			remoteInfo = MemoryMatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		MM0000032C10000100000001 /* MemoryMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		MM0000042C10000100000001 /* MemoryMatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryMatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		MM0000052C10000100000001 /* MemoryMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryMatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		MM0200012C10000100000001 /* MemoryMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchApp.swift; sourceTree = "<group>"; };
+		MM0200022C10000100000001 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		MM0200032C10000100000001 /* MemoryMatchTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchTheme.swift; sourceTree = "<group>"; };
+		MM0200042C10000100000001 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		MM0200052C10000100000001 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		MM0200062C10000100000001 /* CardItemCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemCatalog.swift; sourceTree = "<group>"; };
+		MM0200072C10000100000001 /* MemoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCard.swift; sourceTree = "<group>"; };
+		MM0200082C10000100000001 /* PlayerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfile.swift; sourceTree = "<group>"; };
+		MM0200092C10000100000001 /* GameRoundResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundResult.swift; sourceTree = "<group>"; };
+		MM02000A2C10000100000001 /* DelayScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayScheduler.swift; sourceTree = "<group>"; };
+		MM02000B2C10000100000001 /* MemoryGameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameEngine.swift; sourceTree = "<group>"; };
+		MM02000C2C10000100000001 /* MemoryMatch.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = MemoryMatch.xcdatamodeld; sourceTree = "<group>"; };
+		MM02000D2C10000100000001 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		MM02000E2C10000100000001 /* PlayerProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileRepository.swift; sourceTree = "<group>"; };
+		MM02000F2C10000100000001 /* GameRoundRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundRepository.swift; sourceTree = "<group>"; };
+		MM0200102C10000100000001 /* TVButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVButtonStyles.swift; sourceTree = "<group>"; };
+		MM0200112C10000100000001 /* MemoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCardView.swift; sourceTree = "<group>"; };
+		MM0200122C10000100000001 /* PlayerScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreCardView.swift; sourceTree = "<group>"; };
+		MM0200132C10000100000001 /* TVSegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSegmentedPicker.swift; sourceTree = "<group>"; };
+		MM0200142C10000100000001 /* TVCardIllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCardIllustrationView.swift; sourceTree = "<group>"; };
+		MM0200152C10000100000001 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		MM0200162C10000100000001 /* TVModalOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVModalOverlay.swift; sourceTree = "<group>"; };
+		MM0200172C10000100000001 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		MM0200182C10000100000001 /* PlayerSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSetupViewModel.swift; sourceTree = "<group>"; };
+		MM0200192C10000100000001 /* GameBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewModel.swift; sourceTree = "<group>"; };
+		MM02001A2C10000100000001 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		MM02001B2C10000100000001 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
+		MM02001C2C10000100000001 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		MM02001D2C10000100000001 /* HowToPlayOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayOverlay.swift; sourceTree = "<group>"; };
+		MM02001E2C10000100000001 /* PlayerSetupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSetupScreen.swift; sourceTree = "<group>"; };
+		MM02001F2C10000100000001 /* ChoosePlayerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModal.swift; sourceTree = "<group>"; };
+		MM0200202C10000100000001 /* AddPlayerModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerModal.swift; sourceTree = "<group>"; };
+		MM0200212C10000100000001 /* ManagePlayersModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePlayersModal.swift; sourceTree = "<group>"; };
+		MM0200222C10000100000001 /* GameBoardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardScreen.swift; sourceTree = "<group>"; };
+		MM0200232C10000100000001 /* PauseOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseOverlay.swift; sourceTree = "<group>"; };
+		MM0200242C10000100000001 /* ResultsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
+		MM0200252C10000100000001 /* LocalLeaderboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLeaderboardScreen.swift; sourceTree = "<group>"; };
+		MM0200262C10000100000001 /* RoundDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundDetailModal.swift; sourceTree = "<group>"; };
+		MM0200272C10000100000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		MM0200282C10000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+/* Test File References */
+		MM0200282C10000100000001 /* MemoryGameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameEngineTests.swift; sourceTree = "<group>"; };
+		MM0200292C10000100000001 /* GameEngineLifecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineLifecycleTests.swift; sourceTree = "<group>"; };
+		MM02002A2C10000100000001 /* PlayerValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerValidationTests.swift; sourceTree = "<group>"; };
+		MM02002B2C10000100000001 /* CoreDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceTests.swift; sourceTree = "<group>"; };
+		MM02002C2C10000100000001 /* LeaderboardAggregationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardAggregationTests.swift; sourceTree = "<group>"; };
+		MM02002F2C10000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+/* UI Test File References */
+		MM02002D2C10000100000001 /* MemoryMatchNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchNavigationUITests.swift; sourceTree = "<group>"; };
+		MM02002E2C10000100000001 /* GameBoardInteractionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardInteractionUITests.swift; sourceTree = "<group>"; };
+		MM0200302C10000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		MM0400012C10000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0400022C10000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0400032C10000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		MM0500012C10000100000001 = {
+			isa = PBXGroup;
+			children = (
+				MM0500022C10000100000001 /* MemoryMatch */,
+				MM0500092C10000100000001 /* Tests */,
+				MM05000A2C10000100000001 /* UITests */,
+				MM05000B2C10000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		MM0500022C10000100000001 /* MemoryMatch */ = {
+			isa = PBXGroup;
+			children = (
+				MM0500032C10000100000001 /* App */,
+				MM0500042C10000100000001 /* Theme */,
+				MM0500052C10000100000001 /* Model */,
+				MM0500062C10000100000001 /* Engine */,
+				MM0500072C10000100000001 /* Persistence */,
+				MM0500082C10000100000001 /* Components */,
+				MM05000C2C10000100000001 /* ViewModels */,
+				MM05000D2C10000100000001 /* Views */,
+				MM05000E2C10000100000001 /* Resources */,
+			);
+			path = MemoryMatch;
+			sourceTree = "<group>";
+		};
+		MM0500032C10000100000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200012C10000100000001 /* MemoryMatchApp.swift */,
+				MM0200022C10000100000001 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		MM0500042C10000100000001 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200032C10000100000001 /* MemoryMatchTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		MM0500052C10000100000001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200042C10000100000001 /* GameMode.swift */,
+				MM0200052C10000100000001 /* Difficulty.swift */,
+				MM0200062C10000100000001 /* CardItemCatalog.swift */,
+				MM0200072C10000100000001 /* MemoryCard.swift */,
+				MM0200082C10000100000001 /* PlayerProfile.swift */,
+				MM0200092C10000100000001 /* GameRoundResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		MM0500062C10000100000001 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				MM02000A2C10000100000001 /* DelayScheduler.swift */,
+				MM02000B2C10000100000001 /* MemoryGameEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		MM0500072C10000100000001 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				MM02000C2C10000100000001 /* MemoryMatch.xcdatamodeld */,
+				MM02000D2C10000100000001 /* PersistenceController.swift */,
+				MM02000E2C10000100000001 /* PlayerProfileRepository.swift */,
+				MM02000F2C10000100000001 /* GameRoundRepository.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		MM0500082C10000100000001 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200102C10000100000001 /* TVButtonStyles.swift */,
+				MM0200112C10000100000001 /* MemoryCardView.swift */,
+				MM0200122C10000100000001 /* PlayerScoreCardView.swift */,
+				MM0200132C10000100000001 /* TVSegmentedPicker.swift */,
+				MM0200142C10000100000001 /* TVCardIllustrationView.swift */,
+				MM0200152C10000100000001 /* ConfettiView.swift */,
+				MM0200162C10000100000001 /* TVModalOverlay.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		MM05000C2C10000100000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200172C10000100000001 /* HomeViewModel.swift */,
+				MM0200182C10000100000001 /* PlayerSetupViewModel.swift */,
+				MM0200192C10000100000001 /* GameBoardViewModel.swift */,
+				MM02001A2C10000100000001 /* ResultsViewModel.swift */,
+				MM02001B2C10000100000001 /* LeaderboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		MM05000D2C10000100000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				MM05000F2C10000100000001 /* Home */,
+				MM0500102C10000100000001 /* PlayerSetup */,
+				MM0500112C10000100000001 /* GameBoard */,
+				MM0500122C10000100000001 /* Results */,
+				MM0500132C10000100000001 /* Leaderboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		MM05000F2C10000100000001 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				MM02001C2C10000100000001 /* HomeScreen.swift */,
+				MM02001D2C10000100000001 /* HowToPlayOverlay.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		MM0500102C10000100000001 /* PlayerSetup */ = {
+			isa = PBXGroup;
+			children = (
+				MM02001E2C10000100000001 /* PlayerSetupScreen.swift */,
+				MM02001F2C10000100000001 /* ChoosePlayerModal.swift */,
+				MM0200202C10000100000001 /* AddPlayerModal.swift */,
+				MM0200212C10000100000001 /* ManagePlayersModal.swift */,
+			);
+			path = PlayerSetup;
+			sourceTree = "<group>";
+		};
+		MM0500112C10000100000001 /* GameBoard */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200222C10000100000001 /* GameBoardScreen.swift */,
+				MM0200232C10000100000001 /* PauseOverlay.swift */,
+			);
+			path = GameBoard;
+			sourceTree = "<group>";
+		};
+		MM0500122C10000100000001 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200242C10000100000001 /* ResultsScreen.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		MM0500132C10000100000001 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200252C10000100000001 /* LocalLeaderboardScreen.swift */,
+				MM0200262C10000100000001 /* RoundDetailModal.swift */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		MM05000E2C10000100000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200272C10000100000001 /* Assets.xcassets */,
+				MM0200282C10000100000001 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		MM0500092C10000100000001 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				MM0500142C10000100000001 /* MemoryMatchTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		MM0500142C10000100000001 /* MemoryMatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				MM0200282C10000100000001 /* MemoryGameEngineTests.swift */,
+				MM0200292C10000100000001 /* GameEngineLifecycleTests.swift */,
+				MM02002A2C10000100000001 /* PlayerValidationTests.swift */,
+				MM02002B2C10000100000001 /* CoreDataPersistenceTests.swift */,
+				MM02002C2C10000100000001 /* LeaderboardAggregationTests.swift */,
+				MM02002F2C10000100000001 /* Info.plist */,
+			);
+			path = MemoryMatchTests;
+			sourceTree = "<group>";
+		};
+		MM05000A2C10000100000001 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				MM0500152C10000100000001 /* MemoryMatchUITests */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		MM0500152C10000100000001 /* MemoryMatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				MM02002D2C10000100000001 /* MemoryMatchNavigationUITests.swift */,
+				MM02002E2C10000100000001 /* GameBoardInteractionUITests.swift */,
+				MM0200302C10000100000001 /* Info.plist */,
+			);
+			path = MemoryMatchUITests;
+			sourceTree = "<group>";
+		};
+		MM05000B2C10000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				MM0000032C10000100000001 /* MemoryMatch.app */,
+				MM0000042C10000100000001 /* MemoryMatchTests.xctest */,
+				MM0000052C10000100000001 /* MemoryMatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		MM0000022C10000100000001 /* MemoryMatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = MM0600012C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatch" */;
+			buildPhases = (
+				MM0700012C10000100000001 /* Sources */,
+				MM0400012C10000100000001 /* Frameworks */,
+				MM0800012C10000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoryMatch;
+			productName = MemoryMatch;
+			productReference = MM0000032C10000100000001 /* MemoryMatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		MM0000062C10000100000001 /* MemoryMatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = MM0600022C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatchTests" */;
+			buildPhases = (
+				MM0700022C10000100000001 /* Sources */,
+				MM0400022C10000100000001 /* Frameworks */,
+				MM0800022C10000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				MM0900012C10000100000001 /* PBXTargetDependency */,
+			);
+			name = MemoryMatchTests;
+			productName = MemoryMatchTests;
+			productReference = MM0000042C10000100000001 /* MemoryMatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		MM0000072C10000100000001 /* MemoryMatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = MM0600032C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatchUITests" */;
+			buildPhases = (
+				MM0700032C10000100000001 /* Sources */,
+				MM0400032C10000100000001 /* Frameworks */,
+				MM0800032C10000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				MM0900022C10000100000001 /* PBXTargetDependency */,
+			);
+			name = MemoryMatchUITests;
+			productName = MemoryMatchUITests;
+			productReference = MM0000052C10000100000001 /* MemoryMatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		MM0000012C10000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					MM0000022C10000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					MM0000062C10000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = MM0000022C10000100000001;
+					};
+					MM0000072C10000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = MM0000022C10000100000001;
+					};
+				};
+			};
+			buildConfigurationList = MM0600042C10000100000001 /* Build configuration list for PBXProject "MemoryMatch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = MM0500012C10000100000001;
+			productRefGroup = MM05000B2C10000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				MM0000022C10000100000001 /* MemoryMatch */,
+				MM0000062C10000100000001 /* MemoryMatchTests */,
+				MM0000072C10000100000001 /* MemoryMatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		MM0800012C10000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MM0100272C10000100000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0800022C10000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0800032C10000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		MM0700012C10000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MM0100012C10000100000001 /* MemoryMatchApp.swift in Sources */,
+				MM0100022C10000100000001 /* AppState.swift in Sources */,
+				MM0100032C10000100000001 /* MemoryMatchTheme.swift in Sources */,
+				MM0100042C10000100000001 /* GameMode.swift in Sources */,
+				MM0100052C10000100000001 /* Difficulty.swift in Sources */,
+				MM0100062C10000100000001 /* CardItemCatalog.swift in Sources */,
+				MM0100072C10000100000001 /* MemoryCard.swift in Sources */,
+				MM0100082C10000100000001 /* PlayerProfile.swift in Sources */,
+				MM0100092C10000100000001 /* GameRoundResult.swift in Sources */,
+				MM01000A2C10000100000001 /* DelayScheduler.swift in Sources */,
+				MM01000B2C10000100000001 /* MemoryGameEngine.swift in Sources */,
+				MM01000C2C10000100000001 /* MemoryMatch.xcdatamodeld in Sources */,
+				MM01000D2C10000100000001 /* PersistenceController.swift in Sources */,
+				MM01000E2C10000100000001 /* PlayerProfileRepository.swift in Sources */,
+				MM01000F2C10000100000001 /* GameRoundRepository.swift in Sources */,
+				MM0100102C10000100000001 /* TVButtonStyles.swift in Sources */,
+				MM0100112C10000100000001 /* MemoryCardView.swift in Sources */,
+				MM0100122C10000100000001 /* PlayerScoreCardView.swift in Sources */,
+				MM0100132C10000100000001 /* TVSegmentedPicker.swift in Sources */,
+				MM0100142C10000100000001 /* TVCardIllustrationView.swift in Sources */,
+				MM0100152C10000100000001 /* ConfettiView.swift in Sources */,
+				MM0100162C10000100000001 /* TVModalOverlay.swift in Sources */,
+				MM0100172C10000100000001 /* HomeViewModel.swift in Sources */,
+				MM0100182C10000100000001 /* PlayerSetupViewModel.swift in Sources */,
+				MM0100192C10000100000001 /* GameBoardViewModel.swift in Sources */,
+				MM01001A2C10000100000001 /* ResultsViewModel.swift in Sources */,
+				MM01001B2C10000100000001 /* LeaderboardViewModel.swift in Sources */,
+				MM01001C2C10000100000001 /* HomeScreen.swift in Sources */,
+				MM01001D2C10000100000001 /* HowToPlayOverlay.swift in Sources */,
+				MM01001E2C10000100000001 /* PlayerSetupScreen.swift in Sources */,
+				MM01001F2C10000100000001 /* ChoosePlayerModal.swift in Sources */,
+				MM0100202C10000100000001 /* AddPlayerModal.swift in Sources */,
+				MM0100212C10000100000001 /* ManagePlayersModal.swift in Sources */,
+				MM0100222C10000100000001 /* GameBoardScreen.swift in Sources */,
+				MM0100232C10000100000001 /* PauseOverlay.swift in Sources */,
+				MM0100242C10000100000001 /* ResultsScreen.swift in Sources */,
+				MM0100252C10000100000001 /* LocalLeaderboardScreen.swift in Sources */,
+				MM0100262C10000100000001 /* RoundDetailModal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0700022C10000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MM0100282C10000100000001 /* MemoryGameEngineTests.swift in Sources */,
+				MM0100292C10000100000001 /* GameEngineLifecycleTests.swift in Sources */,
+				MM01002A2C10000100000001 /* PlayerValidationTests.swift in Sources */,
+				MM01002B2C10000100000001 /* CoreDataPersistenceTests.swift in Sources */,
+				MM01002C2C10000100000001 /* LeaderboardAggregationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		MM0700032C10000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				MM01002D2C10000100000001 /* MemoryMatchNavigationUITests.swift in Sources */,
+				MM01002E2C10000100000001 /* GameBoardInteractionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		MM0900012C10000100000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = MM0000022C10000100000001 /* MemoryMatch */;
+			targetProxy = MM0300012C10000100000001 /* PBXContainerItemProxy */;
+		};
+		MM0900022C10000100000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = MM0000022C10000100000001 /* MemoryMatch */;
+			targetProxy = MM0300022C10000100000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		MM0A00012C10000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		MM0A00022C10000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		MM0A00032C10000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MemoryMatch/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		MM0A00042C10000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MemoryMatch/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		MM0A00052C10000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tests/MemoryMatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemoryMatch.app/MemoryMatch";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		MM0A00062C10000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Tests/MemoryMatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemoryMatch.app/MemoryMatch";
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		MM0A00072C10000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UITests/MemoryMatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = MemoryMatch;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		MM0A00082C10000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UITests/MemoryMatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abhilash.MemoryMatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = MemoryMatch;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		MM0600012C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MM0A00032C10000100000001 /* Debug */,
+				MM0A00042C10000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		MM0600022C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MM0A00052C10000100000001 /* Debug */,
+				MM0A00062C10000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		MM0600032C10000100000001 /* Build configuration list for PBXNativeTarget "MemoryMatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MM0A00072C10000100000001 /* Debug */,
+				MM0A00082C10000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		MM0600042C10000100000001 /* Build configuration list for PBXProject "MemoryMatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				MM0A00012C10000100000001 /* Debug */,
+				MM0A00022C10000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = MM0000012C10000100000001 /* Project object */;
+}
