@@ -1,162 +1,134 @@
 # MemoryMatch – Native tvOS Application
 
-**Module:** SE4041 – Mobile Application Design and Development  
-**Assignment:** Assignment 02, Part B (Innovative Application for tvOS)  
-**Student:** Abhilash K A T W  
-**Student ID:** IT22081698  
-**Target Platform:** Apple tvOS 17.0+  
-**Technology Stack:** Swift 5.0, SwiftUI, Core Data, Combine, XCTest  
-**Repository:** [https://github.com/abhilashzz/SE4041_MADD_Assignment-2_tvOS_APP.git](https://github.com/abhilashzz/SE4041_MADD_Assignment-2_tvOS_APP.git)
+MemoryMatch is a native Apple tvOS multiplayer memory puzzle game designed for living room entertainment and cognitive learning. Featuring an intuitive **"Two Players, One Remote"** local co-op mechanic, MemoryMatch allows two players to sit together on the couch and compete or learn using a single Apple TV Remote.
 
 ---
 
-## 1. Project Overview
+## What the App Does
 
-**MemoryMatch** is a native Apple tvOS multiplayer memory puzzle application designed specifically for the living room entertainment and cognitive learning experience. Featuring an innovative **"Two Players, One Remote"** co-op interaction model, MemoryMatch allows two local participants to compete and learn together using a single Siri Remote / Apple TV Remote.
+MemoryMatch provides a fast, engaging living room puzzle experience tailored for the 10-foot TV experience:
 
-The application faithfully implements the five-screen visual design specification from the provided UI design board:
-- **Deep Navy Background** (`#101B2D`)
-- **Raised Slate Panels** (`#1B2D43` with elevated borders `#2A4263`)
-- **Mint-Teal Primary Accents & Player 1 Identity** (`#60D5C6`)
-- **Restrained Amber Highlights & Player 2 Identity** (`#F1BC67`)
-- **Off-White Legible TV Typography** (`#F4F6F8`)
+1. **Two Players, One Remote:**
+   - Designed specifically for shared household play without needing multiple game controllers.
+   - Distinct color-coded identities: Player 1 (Mint-Teal) and Player 2 (Amber).
+   - Clear active turn indicators and focus halos on the big screen.
 
----
+2. **Two Game Modes:**
+   - **Classic Mode:** Traditional memory matching with paired everyday illustrations (Apple, Book, Car, House, Fish, Sun, Leaf, Bicycle).
+   - **Learn Mode:** Educational vocabulary matching where one card shows the illustration and its matching card displays the English word.
 
-## 2. Exactly Five Main Functional Screens
+3. **Difficulty Selection:**
+   - **6 Pairs (12 Cards):** Arranged in a 4-column by 3-row grid.
+   - **8 Pairs (16 Cards):** Arranged in a 4-column by 4-row grid.
 
-In strict compliance with project requirements, MemoryMatch consists of exactly five functional top-level destinations (no decorative launch screens, mandatory logins, or fake onboarding):
+4. **Dynamic Turn Rules:**
+   - Matching a pair awards +1 point and allows the current player to keep their turn.
+   - Mismatched cards stay revealed for 1 second for memorization, then automatically flip face down and hand the turn to the opponent.
+   - Input is locked during mismatch resolution to prevent unintended card flips.
 
-1. **Screen 01 — Home:**  
-   Branding hero ("Find a pair. Share the fun. Two players. One remote."), interactive mode selection (**Classic** picture-to-picture vs. **Learn** picture-to-word), difficulty selection (**6 pairs** / 12 cards vs. **8 pairs** / 16 cards), "Start Game", "Leaderboard", and "How to play" help overlay.
+5. **Local Player Profile Management:**
+   - Create and manage local player profiles with custom names and auto-generated initials.
+   - Validation prevents empty names, excessively long names, or selecting the same profile in both slots.
+   - Deleting a profile preserves historical match records through name snapshots.
 
-2. **Screen 02 — Player Setup:**  
-   Local player slot configuration for Player 1 (Mint Teal avatar circle) and Player 2 (Amber avatar circle). Supported by full profile CRUD (Choose profile, Add profile with validation, Rename profile, confirmed Deletion with historical snapshot preservation).
+6. **Persistent Local Leaderboard:**
+   - Core Data offline persistence saves every completed match.
+   - Filter standings by game mode (All, Classic, Learn) and difficulty (All, 6 pairs, 8 pairs).
+   - Deterministic ranking: Wins descending, Pairs matched descending, and Name alphabetical tie-breaking.
+   - View match details for recent rounds and delete individual records with instant table recalculation.
 
-3. **Screen 03 — Game Board:**  
-   Interactive 4-column card grid (4x3 for 6 pairs; 4x4 for 8 pairs) with live dual-player scoreboard, active turn indicators ("• Your turn"), animated 3D card flips (`MemoryCardView`), safe asynchronous mismatch delays, and a remote-accessible Pause overlay (Resume, Restart, Exit).
-
-4. **Screen 04 — Results:**  
-   Post-match celebration featuring a golden trophy, confetti celebration, winner or draw announcement, both players' pair counts, completed mode/difficulty tags, real Core Data save verification ("✓ Round saved"), and actions for "Play Again", "Leaderboard", and "Home".
-
-5. **Screen 05 — Local Leaderboard:**  
-   Comprehensive persistent statistics with mode filters (All, Classic, Learn) and difficulty filters (All, 6 pairs, 8 pairs). Displays deterministically ranked player standings (Rank, Player, Wins, Pairs, Played), recent match history, focusable round details overlay with single-match deletion, and a confirmed "Clear Results" action.
-
----
-
-## 3. Core Architecture & Game Rules
-
-### Game Rules
-- **Turn Mechanic:** Player 1 starts. A matched pair awards **+1 point** and **retains the current player's turn**.
-- **Mismatch Delay:** Mismatched cards remain visible for **1.0 second** so players can memorize item locations, before flipping back face-down and passing the turn to the opponent.
-- **Safety Locks:** All remote input is strictly ignored during mismatch resolution to prevent state corruption.
-- **Completion:** The round completes when all pairs are matched. Draws (equal pairs) are formally handled and awarded to neither player as a win.
-
-### Core Data Persistence
-- **Player Profiles:** App-local profiles stored with UUID and editable name.
-- **Game Rounds:** Deduplicated by unique round UUID. Contains match date, mode, difficulty, scores, and **player name snapshots**.
-- **Snapshot Preservation:** Deleting or renaming a profile *never* alters or corrupts historical completed game records.
-- **tvOS Storage Tolerance:** Storage defaults to Application Support directory with automatic in-memory fallback, accommodating tvOS local cache lifecycle policies.
-
-### tvOS Focus & Accessibility
-- **Remote Driven:** Full navigation via Apple TV Remote D-pad / directional swipes and Select button.
-- **Anti-Cheating VoiceOver Shielding:** Face-down cards report only `"Hidden card, row X, column Y"` to VoiceOver and UI automation, never revealing the secret hidden picture or word.
-- **Distinct Focus vs. Selection:** Selected modes and difficulty buttons maintain clear persistent checkmark badges, distinctly separated from the animated scaling glow of the remote focus engine.
+7. **TV Focus Engine & Accessibility:**
+   - Native Apple TV directional focus navigation via D-pad and Touch surface.
+   - Smooth 3D card flip animations and TV-safe layout margins.
+   - Non-revealing accessibility labels shield face-down cards from VoiceOver to prevent cheating.
 
 ---
 
-## 4. Project Directory Layout
+## App Screens
 
-```
-SE4041_MADD_Assignment-2_tvOS_APP/
-├── MemoryMatch/
-│   ├── App/
-│   │   ├── MemoryMatchApp.swift
-│   │   └── AppState.swift
-│   ├── Theme/
-│   │   └── MemoryMatchTheme.swift
-│   ├── Model/
-│   │   ├── GameMode.swift
-│   │   ├── Difficulty.swift
-│   │   ├── CardItemCatalog.swift
-│   │   ├── MemoryCard.swift
-│   │   ├── PlayerProfile.swift
-│   │   └── GameRoundResult.swift
-│   ├── Engine/
-│   │   ├── MemoryGameEngine.swift
-│   │   └── DelayScheduler.swift
-│   ├── Persistence/
-│   │   ├── MemoryMatch.xcdatamodeld
-│   │   ├── PersistenceController.swift
-│   │   ├── PlayerProfileRepository.swift
-│   │   └── GameRoundRepository.swift
-│   ├── Components/
-│   │   ├── TVButtonStyles.swift
-│   │   ├── MemoryCardView.swift
-│   │   ├── PlayerScoreCardView.swift
-│   │   ├── TVSegmentedPicker.swift
-│   │   ├── TVCardIllustrationView.swift
-│   │   ├── ConfettiView.swift
-│   │   └── TVModalOverlay.swift
-│   ├── ViewModels/
-│   │   ├── HomeViewModel.swift
-│   │   ├── PlayerSetupViewModel.swift
-│   │   ├── GameBoardViewModel.swift
-│   │   ├── ResultsViewModel.swift
-│   │   └── LeaderboardViewModel.swift
-│   ├── Views/
-│   │   ├── Home/
-│   │   ├── PlayerSetup/
-│   │   ├── GameBoard/
-│   │   ├── Results/
-│   │   └── Leaderboard/
-│   └── Resources/
-│       ├── Info.plist
-│       └── Assets.xcassets/
-├── MemoryMatch.xcodeproj/
-│   ├── project.pbxproj
-│   └── xcshareddata/xcschemes/MemoryMatch.xcscheme
-├── Tests/MemoryMatchTests/
-├── UITests/MemoryMatchUITests/
-├── Scripts/
-│   └── verify_macos.sh
-└── Documentation/
-    ├── ARCHITECTURE.md
-    ├── USER_GUIDE.md
-    ├── TECHNICAL_GUIDE.md
-    ├── TEST_PLAN_AND_RESULTS.md
-    ├── MAC_HANDOFF.md
-    ├── UI_DESIGN_SPECIFICATION.md
-    ├── PITCH_PRESENTATION.md
-    ├── VIVA_EXPLANATIONS.md
-    └── AI_ASSISTED_DEVELOPMENT_LOG.md
+The app contains five core functional screens:
+
+- **Home:** Mode selection (Classic / Learn), difficulty selection (6 / 8 pairs), "Start Game", "Leaderboard", and "How to play" rules overlay.
+- **Player Setup:** Player 1 and Player 2 selection cards, Add Player, Manage Players (rename and delete), and Start Round.
+- **Game Board:** Live scoreboard with turn indicator, 4-column interactive card grid, progress counter, and Pause overlay with Resume, Restart, and Exit options.
+- **Results:** Winner celebration with golden trophy and confetti, pair scores, round save status, "Play Again", "Leaderboard", and "Home" navigation.
+- **Local Leaderboard:** Filterable player rankings table (Rank, Player, Wins, Pairs, Played), recent match history, round detail overlay, and Clear Results action.
+
+---
+
+## Technology Stack
+
+- **Platform:** Apple tvOS 17.0+
+- **Language:** Swift 5.0
+- **UI Framework:** SwiftUI
+- **Persistence:** Core Data (`NSPersistentContainer`)
+- **Reactive State:** Combine (`ObservableObject`, `@Published`)
+- **Testing:** XCTest (Unit Tests & UI Automation Tests)
+
+---
+
+## Project Structure
+
+```text
+MemoryMatch/
+├── App/
+│   ├── MemoryMatchApp.swift          # Main app entry point (@main)
+│   └── AppState.swift                # App routing & session coordinator
+├── Theme/
+│   └── MemoryMatchTheme.swift        # TV color palette, tokens & modifiers
+├── Model/
+│   ├── GameMode.swift                # Classic & Learn mode definitions
+│   ├── Difficulty.swift              # 6 pairs & 8 pairs configurations
+│   ├── CardItemCatalog.swift         # Everyday item catalog & SF Symbols
+│   ├── MemoryCard.swift              # Card struct with accessibility shielding
+│   ├── PlayerProfile.swift           # Player model with validation & initials
+│   └── GameRoundResult.swift         # Match result & aggregate statistics
+├── Engine/
+│   ├── MemoryGameEngine.swift        # Pure domain game logic & turn state
+│   └── DelayScheduler.swift          # Timer protocol for async and test runs
+├── Persistence/
+│   ├── MemoryMatch.xcdatamodeld      # Core Data model
+│   ├── PersistenceController.swift   # Core Data stack with tvOS path resilience
+│   ├── PlayerProfileRepository.swift # Profile CRUD operations
+│   └── GameRoundRepository.swift     # Match CRUD and leaderboard calculations
+├── Components/
+│   ├── MemoryCardView.swift          # Animated 3D card with focus scaling
+│   ├── PlayerScoreCardView.swift     # Scoreboard panel with active turn glow
+│   ├── TVButtonStyles.swift          # Focus-aware button styles
+│   ├── TVSegmentedPicker.swift       # Mode and difficulty selectors
+│   ├── TVCardIllustrationView.swift # Floating 3D decorative cards
+│   ├── ConfettiView.swift            # Celebratory post-match confetti
+│   └── TVModalOverlay.swift          # TV modal container
+├── ViewModels/
+│   ├── HomeViewModel.swift           # Home screen logic
+│   ├── PlayerSetupViewModel.swift    # Profile selection and management
+│   ├── GameBoardViewModel.swift      # Board and pause menu coordinator
+│   ├── ResultsViewModel.swift        # Post-game presentation & save status
+│   └── LeaderboardViewModel.swift    # Standings filter and deletion logic
+├── Views/
+│   ├── Home/                         # HomeScreen & HowToPlayOverlay
+│   ├── PlayerSetup/                  # PlayerSetupScreen & modals
+│   ├── GameBoard/                    # GameBoardScreen & PauseOverlay
+│   ├── Results/                      # ResultsScreen
+│   └── Leaderboard/                  # LocalLeaderboardScreen & RoundDetailModal
+└── Resources/
+    ├── Info.plist                    # tvOS bundle configuration
+    └── Assets.xcassets               # App icon & brand assets
 ```
 
 ---
 
-## 5. Building and Running on macOS
+## How to Build and Run
 
-### Prerequisites
-- macOS Sonoma (14.0+) or macOS Sequoia (15.0+)
-- Xcode 15.0+ or Xcode 16.0+
-- Apple TV Simulator (tvOS 17.0+)
+1. Open `MemoryMatch.xcodeproj` in **Xcode 15+** on macOS.
+2. Select the **`MemoryMatch`** scheme.
+3. Choose an **Apple TV 4K** simulator destination running **tvOS 17.0+**.
+4. Press **`Cmd + R`** to build and run the app.
+5. Press **`Cmd + U`** to run unit and UI automation tests.
 
-### Automated Verification Script
-Run the provided automated verification script from Terminal:
-```bash
-chmod +x Scripts/verify_macos.sh
-./Scripts/verify_macos.sh
-```
+### Simulator Keyboard Controls
 
-### Xcode GUI Execution
-1. Open `MemoryMatch.xcodeproj` in Xcode.
-2. Select the `MemoryMatch` scheme and choose an **Apple TV 4K (3rd generation)** simulator destination.
-3. Press `Cmd + R` to build and run the application.
-4. Press `Cmd + U` to execute all unit tests and UI automation tests.
-
----
-
-## 6. Implementation Status
-
-- **Windows Implementation:** Complete. Source code, UI components, view models, Core Data model, asset catalogs, Xcode project structure, unit tests, and UI tests fully authored and validated.
-- **Mac Verification:** Pending. (Windows environment validation complete; Apple SDK builds, simulator runtime, and tvOS focus tests marked **NOT RUN** until verified on macOS hardware).
+- **Arrow Keys:** Navigate focus across cards and buttons.
+- **Return / Enter:** Select or flip highlighted card.
+- **Escape / Delete:** Back or dismiss dialogs.
+- **Spacebar:** Pause / Resume gameplay.
